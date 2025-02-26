@@ -1,0 +1,172 @@
+\documentclass[sigconf,nonacm,screen]{acmart}
+\geometry{a4paper}
+
+%% PACKAGES %%
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage[capitalise,nameinlink,noabbrev]{cleveref}
+\usepackage{tikz}
+
+\usepackage{lipsum} 
+
+% % % % % % % % % % % % % % % % % % % % %
+%          STUDENT INFORMATION 
+% % % % % % % % % % % % % % % % % % % % %
+\title{The Title of Your Project}
+
+\author{Clever Student} %% ENTER YOUR NAME HERE!!!
+\affiliation{
+  \country{1234567a} %% ENTER YOUR MATRICULATION NUMBER HERE!!!
+}
+
+
+%% DOCUMENT %%
+
+\begin{document}
+% % % % % % % % % % % % % % % % % % % % %
+% 			ABSTRACT
+% % % % % % % % % % % % % % % % % % % % %
+
+\begin{abstract}
+\lipsum[1]
+\end{abstract}
+
+%%%%%%%%%%%% DO NOT EDIT THIS PART!!! %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\maketitle
+\tikz [remember picture, overlay] %
+\node [shift={(0.5cm,-0.5cm)}] at (current page.north west) %
+[anchor=north west,scale=0.7] %
+{\includegraphics{CompSci_logo.pdf}};
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% % % % % % % % % % % % % % % % % % % % %
+% 			INTRODUCTION
+% % % % % % % % % % % % % % % % % % % % %
+\section{Introduction}
+\label{sec:intro}
+
+This document is the \LaTeX template for submitting the \emph{interim report}
+for your MSci project, at the School of Computing Science of the University of
+Glasgow. This is an updated version, starting for the academic year 2024/25.
+Please make sure to update your personal details, including title, name, and
+matriculation number, within the
+\verb|%% STUDENT INFORMATION %%| section of the attached \LaTeX
+source file \verb|main.tex|.
+
+This template is directly derived from ACM's
+\href{https://ctan.org/pkg/acmart?lang=en}{\texttt{acmart}} package; make sure
+to consult the corresponding
+\href{http://mirrors.ctan.org/macros/latex/contrib/acmart/acmart.pdf}{documentation}
+if you face any technical issues, or if you want to explore the full range of
+features offered.
+
+Unless you are already an experienced \LaTeX user, perhaps the most
+straightforward way to typeset your paper is to work directly on Overleaf; this
+is a cloud service (so no need for a local installation) which you can easily
+sign up for using your \verb|@glasgow.ac.uk| email. Here is also a very useful
+\href{https://www.overleaf.com/learn/latex/Tutorials}{\LaTeX\ tutorial}.
+
+\subsection{Note}
+Your report does \emph{not} need not follow exactly the section headings
+included in this document - this is only a \emph{suggested} structure. Also,
+feel free to add subsections, and further structural elements, as desired.
+
+
+% % % % % % % % % % % % % % % % % % % % %
+% 		   STATEMENT OF PROBLEM
+% % % % % % % % % % % % % % % % % % % % %
+\section{Problem Statement}
+\label{sec:problem}
+Clearly state the problem to be addressed in your forthcoming project. Explain
+why it would be worthwhile to solve this problem.
+
+\lipsum[1]
+
+% % % % % % % % % % % % % % % % % % % % %
+% 	         BACKGROUND
+% % % % % % % % % % % % % % % % % % % % %
+\section{Background Survey}
+\label{sec:background}
+
+Present an overview of related prior work including articles, books, and
+existing software products. Critically evaluate the strengths and weaknesses of
+the previous work.
+
+Perhaps you want to cite the seminal paper of \citet{Turing1937}, or
+prior~\cite{Goedel1931} and concurrent~\cite{Church1936} work.
+
+\lipsum[1]
+
+
+% % % % % % % % % % % % % % % % % % % % %
+% 			PROPOSED APPROACH
+% % % % % % % % % % % % % % % % % % % % %
+\section{Proposed Approach}
+\label{sec:approach}
+
+State how you propose to solve your problem. Show that your proposed approach is
+feasible, but identify any risks.
+
+\lipsum[1]
+
+
+% % % % % % % % % % % % % % % % % % % % %
+% 	       PRELIMINARY RESULTS
+% % % % % % % % % % % % % % % % % % % % %
+\section{Preliminary Results}
+\label{sec:results}
+
+Our results are summarized in~\cref{tab:table1}, and a visual representation of
+our analysis can be seen in~\cref{fig:alice}.
+
+%% Example of table
+\begin{table}
+\footnotesize
+\begin{tabular}{lll}
+\toprule
+         & machine A                   & machine B                           \\
+\midrule
+CPU      & Intel Core i7-9700 CPU      & 2x Intel Xeon E5-2630 v3            \\
+CPU Frequency& 3.00GHz                     & 2.40GHz                             \\
+RAM      & 16GB DDR4                   & 128GB                               \\
+OS       & Ubuntu 20.04 LTS            & Ubuntu 16.04 LTS                    \\
+Compiler & GCC 9.3                     & GCC 7.3                             \\
+libm     & v2.31                       & v2.23                               \\
+libomp   & v4.5                        & v4.5                                \\
+\bottomrule
+\end{tabular}
+\caption{This is the table caption.}
+\label{tab:table1}
+\end{table}
+
+%% Example of figure
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\columnwidth]{alice.pdf}
+    \caption{This is the figure caption.}
+    \label{fig:alice}
+\end{figure}
+
+\lipsum[1]
+
+
+% % % % % % % % % % % % % % % % % % % % %
+% 			WORK PLAN
+% % % % % % % % % % % % % % % % % % % % %
+\section{Work Plan}
+\label{sec:plan}
+
+Discuss how you plan to organize your work in until the submission of your final
+paper, identifying intermediate deliverables and milestones.
+
+\lipsum[1]
+
+
+% % % % % % % % % % % % % % % % % % % % %
+% 			BIBLIOGRAPHY
+% % % % % % % % % % % % % % % % % % % % %
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{refs}
+\end{document}
